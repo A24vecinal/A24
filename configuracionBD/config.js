@@ -1,8 +1,3 @@
-console.log('hola config');
-
-
-// TODO: Replace the following with your app's Firebase project configuration
-// See: https://firebase.google.com/docs/web/learn-more#config-object
 const firebaseConfig = {
   apiKey: "AIzaSyDMo_OOGvYs2yQX4mvA3NOSHB2IjSwHtnY",
   authDomain: "base-de-datos-a24.firebaseapp.com",
