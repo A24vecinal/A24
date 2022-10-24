@@ -1,0 +1,60 @@
+.boton2 {
+    display: inline-block;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 300px;
+    height: 300px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:20px;
+    color:#ffffff;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:40px;
+    padding-right:40px;
+    background-color:#d11f0b;
+    cursor:pointer;
+    }
+.boton1{
+    display: inline-block;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 300px;
+    height: 300px;
+    text-decoration:none;
+    font-weight:600;
+    font-size:20px;
+    color:#ffffff;
+    padding-top:20px;
+    padding-bottom:20px;
+    padding-left:40px;
+    padding-right:40px;
+    background-color:#10488a;
+    cursor:pointer;
+
+}
+.fa-solid{
+    margin-top: 50px;
+    font-size: 50px;
+
+}
+
+body{
+    background-color: #252440;
+}
+
+.boton1:hover{
+    background-color: #10488a ;
+    opacity: 80%;
+}
+
+.boton2:hover{
+    background-color:#d11f0b;
+    opacity: 80%;
+}
