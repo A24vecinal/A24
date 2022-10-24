@@ -1,5 +1,3 @@
-console.log('hola');
-
 document.getElementById("formularioUsuarios").addEventListener("submit", registrarUsuario);
 
 function registrarUsuario(e){
@@ -15,7 +13,7 @@ function registrarUsuario(e){
             alert("te falto insertar el nombre");
         }
         if(direccion == ""){
-            alert("te falto insertar el direccion");
+            alert("te falto insertar la direccion");
         }
         if(telefono == ""){
             alert("te falto insertar el telefono");
