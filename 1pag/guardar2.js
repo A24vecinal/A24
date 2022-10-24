@@ -8,7 +8,7 @@ function registrarUsuario(e){
     var telefono = getElementVal("telefonoUsuario");
     var direccion = getElementVal("direccionUsuario");
 
-    if(nombre != null && telefono != null && direccion != null){
+    if(nombre != "" && telefono != "" && direccion != ""){
         guardarEnDB(nombre,telefono,direccion);
     }else{
         if(nombre == ""){
