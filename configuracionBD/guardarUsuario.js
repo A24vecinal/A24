@@ -8,6 +8,8 @@ function registrarUsuario(e){
 
     if(nombre != "" && telefono != "" && direccion != ""){
         guardarEnDB(nombre,telefono,direccion);
+        //para resetear el formulario
+        document.getElementById("formularioUsuarios").reset();
     }else{
         if(nombre == ""){
             alert("te falto insertar el nombre");
@@ -19,9 +21,6 @@ function registrarUsuario(e){
             alert("te falto insertar el telefono");
         }
     }
-    
-    //para resetear el formulario
-    document.getElementById("formularioUsuarios").reset();
 }
 
 const getElementVal = (id) => {
