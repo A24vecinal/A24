@@ -35,7 +35,7 @@ const guardarEnDB = (nombre,telefono,direccion) => {
         Direccion: direccion,
     })
     .then((docRef) => {
-        alert("registro exitoso");
+        alert("Registro exitoso");
     })
     .catch((error) => {
         alert("Error en el registro");
