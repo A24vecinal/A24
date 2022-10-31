@@ -7,7 +7,7 @@ function registrarGrupo(e){
     if(nombreGrupo != "" ){
         guardarEnDB(nombreGrupo);
     }else{
-        alert("inserte el codigo del grupo")
+        alert("Inserte el codigo del grupo")
     }
     
     //para resetear el formulario
@@ -23,7 +23,7 @@ const guardarEnDB = (nombreGrupo) => {
         NombreDelGrupo: nombreGrupo,
     })
     .then((docRef) => {
-        alert("registro exitoso");
+        alert("Registro exitoso");
     })
     .catch((error) => {
         alert("Error en el registro");
