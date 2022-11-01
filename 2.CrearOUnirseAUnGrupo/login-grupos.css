@@ -174,11 +174,3 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
-
-#page-nuevo-grupo {
-  display: none;
-}
-
-#page-unirse-grupo {
-  display: none;
-}

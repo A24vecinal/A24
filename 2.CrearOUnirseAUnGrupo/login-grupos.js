@@ -1,5 +1,5 @@
-/* document.getElementById("button-crear").addEventListener("button", mostrar_CrearNuevoGrupo); */
-/* document.getElementById("button-unirse").addEventListener("button", mostrar_UnirseGrupo); */
+/* document.querySelector(".boton1").addEventListener("button", mostrar_CrearNuevoGrupo);
+document.querySelector(".boton2").addEventListener("button", mostrar_UnirseGrupo); */
 
 console.log('nunu');
 
