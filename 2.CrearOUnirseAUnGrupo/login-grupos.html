@@ -1,56 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <script src="https://kit.fontawesome.com/7ee072da1e.js" crossorigin="anonymous"></script>
-    <title>Grupos</title>
-    <link rel="stylesheet" href="./login-grupos.css">
-    <script src="./login-grupos.js"></script>
+  <script src="https://kit.fontawesome.com/7ee072da1e.js" crossorigin="anonymous"></script>
+  <title>Grupos</title>
+  <link rel="stylesheet" href="./login-grupos.css">
+  <script src="./login-grupos.js"></script>
 </head>
+
 <body>
 
-    <!-- pagina para crear o unirse a un grupo -->
+  <!-- pagina para crear o unirse a un grupo -->
 
-    <div id="buttons-grupos">
-      <button id="button-crear" type="button" class="boton1">
-          <i class="fa-sharp fa-solid fa-plus"></i>
-          <p class="text">CREAR GRUPO NUEVO</p>
-      </button>
-      <br>
-      <button id="button-unirse" type="button" class="boton2">
-          <i class="fa-solid fa-people-group"></i>
-          <p class="text">UNIRSE A UN GRUPO</p>
-      </button>
+  <div id="buttons-grupos">
+    <button id="button-crear" type="button" class="boton1">
+      <i class="fa-sharp fa-solid fa-plus"></i>
+      <p class="text">CREAR GRUPO NUEVO</p>
+    </button>
+    <br>
+    <button id="button-unirse" type="button" class="boton2">
+      <i class="fa-solid fa-people-group"></i>
+      <p class="text">UNIRSE A UN GRUPO</p>
+    </button>
+  </div>
+
+  <!-- pagina para crear nuevo grupo -->
+
+  <div id="page-nuevo-grupo" class="login-page">
+    <div class="form">
+      <form class="login-form" Id="formularioGrupo">
+        <input type="text" id="nombreGrupo" placeholder="Nombre de grupo" />
+        <button type="submit">CREAR</button>
+      </form>
     </div>
+  </div>
 
-    <!-- pagina para crear nuevo grupo -->
+  <!-- pagina para unirse a un grupo -->
 
-    <div id="page-nuevo-grupo" class="login-page">
-        <div class="form">
-          <form class="login-form" Id="formularioGrupo">
-            <input type="text" id="nombreGrupo" placeholder="Nombre de grupo"/>
-            <button type="submit">CREAR</button>
-          </form>
-        </div>
-      </div>
+  <div id="page-unirse-grupo" class="login-page">
+    <div class="form">
+      <form class="login-form">
+        <input type="text" placeholder="Código de Grupo" />
+        <button>ENTRAR</button>
+      </form>
+    </div>
+  </div>
 
-      <!-- pagina para unirse a un grupo -->
-
-      <div id="page-unirse-grupo" class="login-page">
-        <div class="form">
-          <form class="login-form">
-            <input type="text" placeholder="Código de Grupo"/>
-            <button>ENTRAR</button>
-          </form>
-        </div>
-      </div>
-
-
-      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
-      <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
-      <script src="../configuracionBD/config.js"></script>
-      <script src="../configuracionBD/guardarGrupo.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="../configuracionBD/config.js"></script>
+  <script src="../configuracionBD/guardarGrupo.js"></script>
 </body>
+
 </html>
 
 <i class="fa-solid fa-users-medical"></i>
