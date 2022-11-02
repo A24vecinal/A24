@@ -1,5 +1,16 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+.icon {
+  cursor: pointer;
+  color: white;
+}
+
+.botonAtras {
+  text-decoration: none;
+  background-color: #252440;
+  border: none;
+}
+
 .boton2 {
   display: inline-block;
   display: block;
