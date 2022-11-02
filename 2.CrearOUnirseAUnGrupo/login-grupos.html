@@ -6,9 +6,19 @@
   <title>Grupos</title>
   <link rel="stylesheet" href="./login-grupos.css">
   <script src="./login-grupos.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
 </head>
 
 <body>
+  <!-- agregar boton flecha para volver a atras -->
+
+  <div id="botonAtrasDiv" class="divBotonAtras" style="display: none;">
+    <button onclick="volverAtras()" type="button" class="botonAtras">
+      <span class="material-symbols-outlined icon">
+        arrow_back
+      </span>
+    </button>
+  </div>
 
   <!-- pagina para crear o unirse a un grupo -->
 
@@ -44,12 +54,6 @@
         <button>ENTRAR</button>
       </form>
     </div>
-  </div>
-
-  <!-- agregar boton flecha para volver a atras -->
-
-  <div id="botonAtrasDiv" class="divBotonAtras" style="display: none;">
-    <button onclick="volverAtras()" type="button" class="botonAtras"></button>
   </div>
 
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
