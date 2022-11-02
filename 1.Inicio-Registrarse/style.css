@@ -26,7 +26,7 @@
   box-sizing: border-box;
   font-size: 14px;
 }
-.form button {
+.botonIngresar {
   font-family: "Roboto", sans-serif;
   text-transform: uppercase;
   outline: 0;
@@ -40,9 +40,9 @@
   transition: all 0.3 ease;
   cursor: pointer;
 }
-.form button:hover,.form button:active,.form button:focus {
+/* .form button:hover,.form button:active,.form button:focus {
   background: #252440;
-}
+} */
 .form .message {
   margin: 15px 0 0;
   color: #b3b3b3;
@@ -97,3 +97,45 @@ body {
   -moz-osx-font-smoothing: grayscale;      
 }
 
+.pRegistrarse {
+  font-size: 0.7rem;
+}
+
+.botonDeRegistrarse {
+  text-decoration: none;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+/* .botonDeRegistrarse:hover,
+.botonDeRegistrarse:active,
+.botonDeRegistrarse:focus {
+  background: #252440;
+} */
+
+.botonRegistrarse {
+  font-family: "Roboto", sans-serif;
+  text-transform: uppercase;
+  outline: 0;
+  background: #252440;
+  width: 100%;
+  border: 0;
+  padding: 15px;
+  color: #FFFFFF;
+  font-size: 14px;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+
+.pIniciarSesion {
+  font-size: 0.7rem;
+}
+
+.botonDeIniciarSesion {
+  text-decoration: none;
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+}
