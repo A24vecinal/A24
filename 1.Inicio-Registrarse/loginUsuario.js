@@ -1,3 +1,5 @@
+console.log('Hello World');
+
 function mostras_Registrarse() {
     document.getElementById('IniciarSesionDiv').style.display = 'none';
     document.getElementById('RegistrarseDiv').style.display = 'block';

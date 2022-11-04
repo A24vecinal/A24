@@ -7,14 +7,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Ingresar</title>
   <link rel="stylesheet" href="style.css">
-  <script src="./loginUsuario.js"></script>
+  <script src="./loginUsuario.js" type="module"></script>
 
 </head>
 
 <body>
   <div id="IniciarSesionDiv" class="login-page" style="display: block;">
     <div class="form">
-      <form class="login-form" id="formularioUsuarios">
+      <form class="login-form" id="formularioUsuariosIniciarSesion">
         <input type="text" id="nombreUsuario" placeholder="Nombre" />
         <input type="text" id="telefonoUsuario" placeholder="Teléfono" />
         <input type="text" id="direccionUsuario" placeholder="Dirección" />
@@ -29,10 +29,10 @@
 
   <div id="RegistrarseDiv" class="login-page" style="display: none;">
     <div class="form">
-      <form class="login-form" id="formularioUsuarios">
-        <input type="text" id="nombreUsuario" placeholder="Nombre" />
-        <input type="text" id="telefonoUsuario" placeholder="Teléfono" />
-        <input type="text" id="direccionUsuario" placeholder="Dirección" />
+      <form class="login-form" id="formularioUsuariosRegistrarse">
+        <input type="text" id="nombreUsuarioRegistrarte" placeholder="Nombre" />
+        <input type="text" id="telefonoUsuarioRegistrarte" placeholder="Teléfono" />
+        <input type="text" id="direccionUsuarioRegistrarte" placeholder="Dirección" />
         <button onclick="mostras_IniciarSesion()" class="botonDeIniciarSesion" type="button">
           <p class="pIniciarSesion">¿Ya tienes cuenta? Inicia Sesion</p>
         </button>

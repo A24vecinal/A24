@@ -1,15 +1,15 @@
-document.getElementById("formularioUsuarios").addEventListener("submit", registrarUsuario);
+document.getElementById("formularioUsuariosRegistrarse").addEventListener("submit", registrarUsuario);
 
 function registrarUsuario(e){
     e.preventDefault();
-    var nombre = getElementVal("nombreUsuario");
-    var telefono = getElementVal("telefonoUsuario");
-    var direccion = getElementVal("direccionUsuario");
+    var nombre = getElementVal("nombreUsuarioRegistrarte");
+    var telefono = getElementVal("telefonoUsuarioRegistrarte");
+    var direccion = getElementVal("direccionUsuarioRegistrarte");
 
     if(nombre != "" && telefono != "" && direccion != ""){
         guardarEnDB(nombre,telefono,direccion);
         //para resetear el formulario
-        document.getElementById("formularioUsuarios").reset();
+        document.getElementById("formularioUsuariosRegistrarse").reset();
     }else{
         if(nombre == ""){
             alert("te falto insertar el nombre");
@@ -35,6 +35,7 @@ const guardarEnDB = (nombre,telefono,direccion) => {
     })
     .then((docRef) => {
         alert("Registro exitoso");
+        location.href = "../2.CrearOUnirseAUnGrupo/login-grupos.html"
     })
     .catch((error) => {
         alert("Error en el registro");
