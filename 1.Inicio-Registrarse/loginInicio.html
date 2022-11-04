@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ingresar</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="./loginUsuario.js" type="module"></script>
+
+</head>
+
+<body>
+    <div id="IniciarSesionDiv" class="login-page" style="display: block;">
+        <div class="form">
+            <form class="login-form" id="formularioUsuariosIniciarSesion">
+                <input type="text" id="nombreUsuario" placeholder="Nombre" />
+                <input type="text" id="telefonoUsuario" placeholder="Teléfono" />
+                <input type="text" id="direccionUsuario" placeholder="Dirección" />
+                <button onclick="mostras_Registrarse()" class="botonDeRegistrarse" type="button">
+                    <p class="pRegistrarse">¿No tienes cuenta? Registrarse</p>
+                </button>
+                <button class="botonIngresar" type="submit">INGRESAR</button>
+
+            </form>
+        </div>
+    </div>
+
+    <div id="RegistrarseDiv" class="login-page" style="display: none;">
+        <div class="form">
+            <form class="login-form" id="formularioUsuariosRegistrarse">
+                <input type="text" id="nombreUsuarioRegistrarte" placeholder="Nombre" />
+                <input type="text" id="telefonoUsuarioRegistrarte" placeholder="Teléfono" />
+                <input type="text" id="direccionUsuarioRegistrarte" placeholder="Dirección" />
+                <button onclick="mostras_IniciarSesion()" class="botonDeIniciarSesion" type="button">
+                    <p class="pIniciarSesion">¿Ya tienes cuenta? Inicia Sesion</p>
+                </button>
+                <button class="botonRegistrarse" type="submit">Registrarse</button>
+
+            </form>
+        </div>
+    </div>
+
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+    <script src="../configuracionBD/config.js"></script>
+    <script src="../configuracionBD/guardarUsuario.js"></script>
+</body>
+
+</html>
