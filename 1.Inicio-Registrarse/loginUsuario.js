@@ -1,3 +1,6 @@
+/* import '../configuracionBD/firebase.js' */
+/* import '../configuracionBD/validarUsuarios.js' */
+
 console.log('Hello World');
 
 function mostras_Registrarse() {
