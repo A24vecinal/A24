@@ -39,6 +39,7 @@ function guardarUsuario (nombre,telefono,direccion){
     .catch((error) => {
         alert("Error en el registro");
     });
-    //db.collection("Usuarios").doc(telefono).collection("GruposDelUsuario").add({});
-    db.collection("aux").doc("aux").set({Telefono: telefono});
+    
+    db.collection("aux").doc(telefono).set({Telefono: telefono});
+    
 };
