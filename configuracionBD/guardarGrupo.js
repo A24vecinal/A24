@@ -37,7 +37,7 @@ async function guardarGrupo(nombreGrupo, codigoGrupo) {
     db.collection("Usuarios").doc(telefono).collection("GruposDelUsuario").doc(codigoGrupo).set({}); //buscar referencia a telefono
     //alert(telefono);
     db.collection("aux").doc(telefono).delete();
-    
+    db.collection("Grupos").doc(codigoGrupo).collection("UsuarioDelGrupos").doc(telefono).set({});
 };
 function generarToken(){
     var digitos = "_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
