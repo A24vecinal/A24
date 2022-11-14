@@ -1,15 +1,14 @@
-document.getElementById("formularioUsuariosRegistrarse").addEventListener("submit", registrarUsuario);
+document.getElementById("formularioUsuariosIniciarSesion").addEventListener("submit", registrarUsuario);
 
 function registrarUsuario(e){
     e.preventDefault();
-    var nombre = getElementVal("nombreUsuarioRegistrarte");
-    var telefono = getElementVal("telefonoUsuarioRegistrarte");
-    var direccion = getElementVal("direccionUsuarioRegistrarte");
-
+    var nombre = getElementVal("nombreUsuario");
+    var telefono = getElementVal("telefonoUsuario");
+    var direccion = getElementVal("direccionUsuario");
     if(nombre != "" && telefono != "" && direccion != ""){
-        guardarEnDB(nombre,telefono,direccion);
+        guardarUsuario(nombre,telefono,direccion);
         //para resetear el formulario
-        document.getElementById("formularioUsuariosRegistrarse").reset();
+        document.getElementById("formularioUsuariosIniciarSesion").reset();
     }else{
         if(nombre == ""){
             alert("te falto insertar el nombre");
@@ -27,8 +26,8 @@ const getElementVal = (id) => {
     return document.getElementById(id).value;
 }
 
-const guardarEnDB = (nombre,telefono,direccion) => {
-    db.collection("Usuarios").add({
+function guardarUsuario (nombre,telefono,direccion){
+    db.collection("Usuarios").doc(telefono).set({
         Nombre: nombre,
         Telefono: telefono,
         Direccion: direccion,
@@ -40,4 +39,6 @@ const guardarEnDB = (nombre,telefono,direccion) => {
     .catch((error) => {
         alert("Error en el registro");
     });
+    //db.collection("Usuarios").doc(telefono).collection("GruposDelUsuario").add({});
+    db.collection("aux").doc("aux").set({Telefono: telefono});
 };
