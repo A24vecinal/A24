@@ -41,7 +41,7 @@
     <div class="form">
       <form class="login-form" Id="formularioGrupo">
         <input type="text" id="nombreGrupo" placeholder="Nombre de grupo" />
-        <button type="submit" >CREAR</button>
+        <button type="button" onclick="registrarGrupo()">CREAR</button>
       </form>
     </div>
   </div>
@@ -50,9 +50,9 @@
 
   <div id="page-unirse-grupo" class="login-page" style="display: none;">
     <div class="form">
-      <form class="login-form">
-        <input type="text" placeholder="Codigo de Grupo" />
-        <button>ENTRAR</button>
+      <form class="login-form" id="formParaUnirseAGrupo">
+        <input type="text" id="codigoGrupo" placeholder="Codigo de Grupo" />
+        <button type="button" onclick="agrUsers()">ENTRAR</button>
       </form>
     </div>
   </div>
@@ -62,6 +62,8 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
   <script src="../configuracionBD/config.js"></script>
   <script src="../configuracionBD/guardarGrupo.js"></script>
+  <script src="../configuracionBD/unirseAGrupo.js"></script>
+
 </body>
 
 </html>

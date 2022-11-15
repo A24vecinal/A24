@@ -7,7 +7,7 @@ function registrarGrupo(){
         codigoGrupo = generarToken();
         guardarGrupo(nombreGrupo, codigoGrupo);
     }else{
-        alert("Inserte el codigo del grupo")
+        alert("Inserte el nombre del grupo")
     }
     
     //para resetear el formulario
@@ -29,16 +29,17 @@ async function guardarGrupo(nombreGrupo, codigoGrupo) {
     .catch((error) => {
         alert("Error en el registro");
     });
-    
-    const document = await db.collection("aux").get(); // Retorna una Promise
+
     var telefono;
+    const document = await db.collection("aux").get(); // Retorna una Promise
     document.forEach(doc => telefono = doc.id);
+    //alert(telefono);
 
     db.collection("Usuarios").doc(telefono).collection("GruposDelUsuario").doc(codigoGrupo).set({}); //buscar referencia a telefono
-    //alert(telefono);
     db.collection("aux").doc(telefono).delete();
     db.collection("Grupos").doc(codigoGrupo).collection("UsuarioDelGrupos").doc(telefono).set({});
 };
+
 function generarToken(){
     var digitos = "_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
     var token = "";
@@ -49,3 +50,4 @@ function generarToken(){
     }
     return token;
 };/* abcdefghijklmnopqrstuvwxyz */
+
