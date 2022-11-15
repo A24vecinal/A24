@@ -22,6 +22,7 @@ async function guardarGrupo(nombreGrupo, codigoGrupo) {
     db.collection("Grupos").doc(codigoGrupo).set({
         NombreDelGrupo: nombreGrupo,
         CodigoDelGrupo: codigoGrupo,
+        Alarma: false,
     })
     .then((docRef) => {
         alert("Registro exitoso");
