@@ -22,6 +22,7 @@ const guardarEnDB = (nombreGrupo, codigoGrupo) => {
     db.collection("Grupos").add({
         NombreDelGrupo: nombreGrupo,
         CodigoDelGrupo: codigoGrupo,
+        Alarma: false,
     })
     .then((docRef) => {
         alert("Registro exitoso");
