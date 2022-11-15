@@ -1,10 +1,11 @@
 document.getElementById("formularioGrupo").addEventListener("submit", registrarGrupo);
-function registrarGrupo(e){
-    e.preventDefault();
+
+function registrarGrupo(){
+    //e.preventDefault();
     var nombreGrupo = getElementVal("nombreGrupo");
     if(nombreGrupo != "" ){
         codigoGrupo = generarToken();
-        guardarEnDB(nombreGrupo, codigoGrupo);
+        guardarGrupo(nombreGrupo, codigoGrupo);
     }else{
         alert("Inserte el codigo del grupo")
     }
@@ -13,13 +14,12 @@ function registrarGrupo(e){
     document.getElementById("formularioGrupo").reset();
 }
 
-
-const getElementVal = (id) => {
+function getElementVal(id){
     return document.getElementById(id).value;
 }
 
-const guardarEnDB = (nombreGrupo, codigoGrupo) => {
-    db.collection("Grupos").add({
+async function guardarGrupo(nombreGrupo, codigoGrupo) {
+    db.collection("Grupos").doc(codigoGrupo).set({
         NombreDelGrupo: nombreGrupo,
         CodigoDelGrupo: codigoGrupo,
         Alarma: false,
@@ -30,6 +30,15 @@ const guardarEnDB = (nombreGrupo, codigoGrupo) => {
     .catch((error) => {
         alert("Error en el registro");
     });
+    
+    const document = await db.collection("aux").get(); // Retorna una Promise
+    var telefono;
+    document.forEach(doc => telefono = doc.id);
+
+    db.collection("Usuarios").doc(telefono).collection("GruposDelUsuario").doc(codigoGrupo).set({}); //buscar referencia a telefono
+    //alert(telefono);
+    db.collection("aux").doc(telefono).delete();
+    db.collection("Grupos").doc(codigoGrupo).collection("UsuarioDelGrupos").doc(telefono).set({});
 };
 function generarToken(){
     var digitos = "_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
