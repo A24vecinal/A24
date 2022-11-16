@@ -1,21 +1,16 @@
-document.getElementById("formularioGrupo").addEventListener("submit", registrarGrupo);
+///document.getElementById("formularioGrupo").addEventListener("submit", registrarGrupo);
 
 function registrarGrupo(){
-    //e.preventDefault();
     var nombreGrupo = getElementVal("nombreGrupo");
     if(nombreGrupo != "" ){
         codigoGrupo = generarToken();
         guardarGrupo(nombreGrupo, codigoGrupo);
+        cargarDatos(codigoGrupo);
     }else{
         alert("Inserte el nombre del grupo")
     }
-    
     //para resetear el formulario
     document.getElementById("formularioGrupo").reset();
-}
-
-function getElementVal(id){
-    return document.getElementById(id).value;
 }
 
 async function guardarGrupo(nombreGrupo, codigoGrupo) {
@@ -29,16 +24,18 @@ async function guardarGrupo(nombreGrupo, codigoGrupo) {
     .catch((error) => {
         alert("Error en el registro");
     });
-
-    var telefono;
-    const document = await db.collection("aux").get(); // Retorna una Promise
-    document.forEach(doc => telefono = doc.id);
-    //alert(telefono);
-
-    db.collection("Usuarios").doc(telefono).collection("GruposDelUsuario").doc(codigoGrupo).set({}); //buscar referencia a telefono
-    db.collection("aux").doc(telefono).delete();
-    db.collection("Grupos").doc(codigoGrupo).collection("UsuarioDelGrupos").doc(telefono).set({});
 };
+
+function agregarUsuarioPorCodigo(){
+    var codigoGrupo = getElementVal("codigoGrupo");
+    if(codigoGrupo != "" ){
+        cargarDatos(codigoGrupo);
+    }else{
+        alert("Inserte el codigo del grupo")
+    }
+    //para resetear el formulario
+    document.getElementById("formParaUnirseAGrupo").reset();
+}
 
 function generarToken(){
     var digitos = "_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
