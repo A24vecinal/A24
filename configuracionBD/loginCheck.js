@@ -7,6 +7,6 @@ export const loginCheck = user => {
             Si no tiene un grupo, mostrar la pag de CrearOUnirseAUnGrupo
             location.href = "../2.CrearOUnirseAUnGrupo/login-grupos.html"
         } */
-        location.href = "../2.CrearOUnirseAUnGrupo/login-grupos.html"
+        // location.href = "../2.CrearOUnirseAUnGrupo/login-grupos.html"
     }
 }
