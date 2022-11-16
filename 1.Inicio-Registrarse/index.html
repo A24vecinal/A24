@@ -9,7 +9,6 @@
   <link rel="stylesheet" href="style.css">
   <script src="./loginUsuario.js"></script>
   <script src="./main.js" type="module"></script>
-  
 
 </head>
 
@@ -26,11 +25,12 @@
           <p class="pRegistrarse">¿No tienes cuenta? Registrarse</p>
         </button>
           <button class="botonIngresar" type="submit">INGRESAR</button>
+        <button class="botonDeRegistrarse" type="button" id="googleLogin">Google</button>
       </form>
     </div>
   </div>
 
-<!-- Div para registrarse -->
+  <!-- Div para registrarse -->
 
   <div id="RegistrarseDiv" class="login-page" style="display: none;">
     <div class="form">
@@ -51,8 +51,10 @@
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
   <script src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+  <script src="./loginUsuario.js"></script>
   <script src="../configuracionBD/config.js"></script>
   <script src="../configuracionBD/guardarUsuario.js"></script>
+
 </body>
 
 </html>

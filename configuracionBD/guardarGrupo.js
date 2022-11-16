@@ -1,25 +1,20 @@
-document.getElementById("formularioGrupo").addEventListener("submit", registrarGrupo);
-function registrarGrupo(e){
-    e.preventDefault();
+///document.getElementById("formularioGrupo").addEventListener("submit", registrarGrupo);
+
+function registrarGrupo(){
     var nombreGrupo = getElementVal("nombreGrupo");
     if(nombreGrupo != "" ){
         codigoGrupo = generarToken();
-        guardarEnDB(nombreGrupo, codigoGrupo);
+        guardarGrupo(nombreGrupo, codigoGrupo);
+        cargarDatos(codigoGrupo);
     }else{
-        alert("Inserte el codigo del grupo")
+        alert("Inserte el nombre del grupo")
     }
-    
     //para resetear el formulario
     document.getElementById("formularioGrupo").reset();
 }
 
-
-const getElementVal = (id) => {
-    return document.getElementById(id).value;
-}
-
-const guardarEnDB = (nombreGrupo, codigoGrupo) => {
-    db.collection("Grupos").add({
+async function guardarGrupo(nombreGrupo, codigoGrupo) {
+    db.collection("Grupos").doc(codigoGrupo).set({
         NombreDelGrupo: nombreGrupo,
         CodigoDelGrupo: codigoGrupo,
     })
@@ -30,6 +25,18 @@ const guardarEnDB = (nombreGrupo, codigoGrupo) => {
         alert("Error en el registro");
     });
 };
+
+function agregarUsuarioPorCodigo(){
+    var codigoGrupo = getElementVal("codigoGrupo");
+    if(codigoGrupo != "" ){
+        cargarDatos(codigoGrupo);
+    }else{
+        alert("Inserte el codigo del grupo")
+    }
+    //para resetear el formulario
+    document.getElementById("formParaUnirseAGrupo").reset();
+}
+
 function generarToken(){
     var digitos = "_0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ_";
     var token = "";
@@ -40,3 +47,4 @@ function generarToken(){
     }
     return token;
 };/* abcdefghijklmnopqrstuvwxyz */
+
