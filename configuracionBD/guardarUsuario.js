@@ -39,7 +39,8 @@ function guardarUsuario (nombre,telefono,direccion){
     .catch((error) => {
         alert("Error en el registro");
     });
-    
+    //Se crea variable auxiliar con el id del documento como el numero 
+    //de telefono para tenerlo de referencia despues,
+    //cuando de crea o se une a un grupo la persona logueada se elimina 
     db.collection("aux").doc(telefono).set({Telefono: telefono});
-    
 };
