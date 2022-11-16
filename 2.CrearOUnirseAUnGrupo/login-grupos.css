@@ -1,5 +1,9 @@
 @import url(https://fonts.googleapis.com/css?family=Roboto:300);
 
+body{
+  background-color: #252440;
+}
+
 .icon {
   cursor: pointer;
   color: white;
@@ -11,47 +15,37 @@
   border: none;
 }
 
-.boton2 {
-  display: inline-block;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: auto;
+.botoness{
+  width: 100%; 
+  }
+
+.boton1{
   width: 300px;
   height: 300px;
+  background-color: #10488a;
   text-decoration: none;
   font-weight: 600;
   font-size: 20px;
-  color: #ffffff;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-  background-color: #d11f0b;
+  color: #FFFFFF;
+  display: block;
+  margin-right: auto;
+  margin-left: auto; 
   cursor: pointer;
+
 }
 
-.boton1 {
-  display: inline-block;
-  display: block;
-  margin-right: auto;
-  margin-left: auto;
-  margin-top: auto;
-  margin-bottom: auto;
+.boton2{
   width: 300px;
   height: 300px;
+  background-color: #d11f0b;
   text-decoration: none;
   font-weight: 600;
   font-size: 20px;
-  color: #ffffff;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 40px;
-  padding-right: 40px;
-  background-color: #10488a;
+  color: #FFFFFF;
+  display: block;
+  margin-right: auto;
+  margin-left: auto; 
   cursor: pointer;
-
 }
 
 .fa-solid {
